@@ -1,1 +1,3 @@
-console.log("diu");
+console.log("exportModule2");
+
+console.log(this);
