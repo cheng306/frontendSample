@@ -10,8 +10,10 @@ export function exportFunction3(input){
   return `exprtFunction accept ${input}`;
 }
 
-console.log("import.meta in exportModule:");
+console.log("exportModule:");
 console.log(import.meta);
+console.log(this);
+
 
 // document.addEventListener("DOMContentLoaded", function(event){
 //   console.log("DOMContentLoaded");

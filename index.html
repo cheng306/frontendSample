@@ -7,18 +7,44 @@
   <body>
   <h1 id="greeting">Hello</h1>
 
-
-
   <!-- get dojo -->
   <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="async: true"></script>
 
-  <script  type="module" src="src/moduleB.js"></script>
   <script  type="module" src="src/importModule.js"></script>
-  <script src="src/script1.js"></script>
+  <!-- <script  type="module" src="src/importModule.js"></script> -->
+  <!-- <script src="src/script1.js"></script> -->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
   
+
+
   <script>
+    document.addEventListener("DOMContentLoaded", function(param){
+      console.log("DOMContentLoaded");
+      console.log(param);
+    });
+
+    document.addEventListener("DOMContentLoaded", function(param){
+      console.log("2nd: DOMContentLoaded");
+      console.log(param);
+    });
+
+
+
+ 
+
+    window.onload = function() { // can also use window.addEventListener('load', (event) => {
+      console.log("window.load:")
+    };
+
+    // window.onbeforeunload = function() {
+      
+    //   return false;
+    // };
+
+    window.onbeforeunload = function() {
+      return "There are unsaved changes. Leave now?";
+    };
 
   </script>
 
