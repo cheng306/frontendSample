@@ -19,34 +19,39 @@
 
 
   <script>
-    document.addEventListener("DOMContentLoaded", function(param){
-      console.log("DOMContentLoaded");
-      console.log(param);
-    });
+    // document.addEventListener("DOMContentLoaded", function(param){
+    //   console.log("DOMContentLoaded");
+    //   console.log(param);
+    // });
 
-    document.addEventListener("DOMContentLoaded", function(param){
-      console.log("2nd: DOMContentLoaded");
-      console.log(param);
-    });
+    // document.addEventListener("DOMContentLoaded", function(param){
+    //   console.log("2nd: DOMContentLoaded");
+    //   console.log(param);
+    // });
 
+
+
+
+    // window.onload = function() { // can also use window.addEventListener('load', (event) => {
+    //   console.log("window.load:")
+    // };
 
 
  
-
-    window.onload = function() { // can also use window.addEventListener('load', (event) => {
-      console.log("window.load:")
-    };
-
-    // window.onbeforeunload = function() {
-      
-    //   return false;
-    // };
-
-    window.onbeforeunload = function() {
-      return "There are unsaved changes. Leave now?";
-    };
-
   </script>
+  <script>
+      let script = document.createElement('script');
+
+// can load any script, from any domain
+script.src = "script1.js"
+document.head.append(script);
+
+script.onload = function() {
+  // the script creates a variable "_"
+  console.log( _.VERSION ); // shows library version
+};
+  </script>
+
 
 
   </body>

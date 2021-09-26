@@ -11,11 +11,7 @@ console.log(this);
 
 
 
-// var test_div = document.querySelector("#test_div");
-// test_div.innerHTML=exportFunction("Johnny");
 
-//console.log(import.meta);
-//console.log(exportFunction("Johnny"));
 
 
 
