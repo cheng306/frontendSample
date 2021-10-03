@@ -10,8 +10,12 @@
   <!-- get dojo -->
   <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="async: true"></script>
 
-  <script  type="module" src="src/importModule.js"></script>
-  <!-- <script  type="module" src="src/importModule.js"></script> -->
+  <script  type="module" src="src/importModule.js">
+    prom1.catch(function(e){
+      console.log(e);
+    });
+  </script>
+
   <!-- <script src="src/script1.js"></script> -->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
@@ -29,9 +33,6 @@
     //   console.log(param);
     // });
 
-
-
-
     // window.onload = function() { // can also use window.addEventListener('load', (event) => {
     //   console.log("window.load:")
     // };
@@ -40,16 +41,35 @@
  
   </script>
   <script>
-      let script = document.createElement('script');
+      // let script = document.createElement('script');
 
-// can load any script, from any domain
-script.src = "script1.js"
-document.head.append(script);
+      // // can load any script, from any domain
+      // script.src = "src/script1.js"
+      // document.head.append(script);
 
-script.onload = function() {
-  // the script creates a variable "_"
-  console.log( _.VERSION ); // shows library version
-};
+      // script.onload = function() {
+      //   console.log(_);
+      //   // the script creates a variable "_"
+      //   try{
+      //     console.log(inexistent); // shows library version
+      //   }
+      //   catch(e){
+      //     console.log(e);
+      //   }
+        
+      // };
+
+     
+      document.onerror =  function(){
+        console.log("document.error")
+      }
+      window.onerror =  function(){
+        console.log("window.error")
+      }
+
+
+
+     
   </script>
 
 
