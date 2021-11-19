@@ -10,11 +10,38 @@
   <!-- get dojo -->
   <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="async: true"></script>
 
+  <script async type="module" >//src="src/script2.js"
+    // for (let i=0; i<10; i++){
+    //   console.log(i);
+    // }
+
+    console.log("long script");
+  </script>
+  
+
   <script  type="module" src="src/importModule.js"></script>
   <!-- <script  type="module" src="src/importModule.js"></script> -->
   <!-- <script src="src/script1.js"></script> -->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+
+  
+
+  <script async  src="src/script1.js">
+    
+  </script>
+
+<script>
+  function ready() {
+    console.log("DOMContentLoaded");
+  }
+
+  document.addEventListener("DOMContentLoaded", ready);
+</script>
+
+
+
+
   
 
 
@@ -39,20 +66,6 @@
 
  
   </script>
-  <script>
-      let script = document.createElement('script');
-
-      // can load any script, from any domain
-      script.src = "script1.js"
-      document.head.append(script);
-
-      script.onload = function() {
-        // the script creates a variable "_"
-        console.log( _.VERSION ); // shows library version
-      };
-  </script>
-
-
-
+   <button id="button">Button</button> 
   </body>
 </html>

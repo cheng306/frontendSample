@@ -1,1 +1,1 @@
-console.log('script1.js')
+console.log('short script')
